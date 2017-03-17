@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>data_backup</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/foreign/jquery-1.12.0.min.js"></script> 
+<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css" />
+<style type="text/css">
+	#databacup_search{
+		height: 30px;
+		width: 790px;
+		margin-left: 20px;
+		margin-top: 20px;
+		/*border: 1px solid gray;*/
+	}
+	/*设置浮动使span和input/button在同一行*/
+	#databacup_search span{
+		font-size: 15px;
+		float: left;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	.databacup_inp_btn{
+		float: right;
+		margin-right: 25px;
+	}
+	#databacup_detail{
+		/*padding: 5px;*/
+		margin-left: 5px;
+		margin-top: 1px;
+		height: 560px;
+		border: 1px solid red;
+	}
+	#databacup_detail table{
+		/*新添加*/
+		table-layout:fixed;
+		/*新添加*/
+		width: 770px;
+	}
+	#databacup_detail table tr{
+		/*height: 80px;*/
+	}
+
+
+	/*新添加*/
+		
+	#databacup_detail table tr td{
+		/*width: 30px;*/
+	}
+	/*新添加*/
+
+
+	#databacup_cap{
+		height: 28px;
+		color: black;
+		margin-bottom: 2px;
+		background: url("../image/movebox_title.gif");
+	}
+	#databacup_page{
+		/*margin-top: -30px;*/
+		/*border: 1px solid red;*/
+	}
+	#databacup_page ul{
+		margin-left: 200px;
+		/*使分页相对表格紧靠点*/
+		margin-top: -12px;
+	}
+
+</style>
+</head>
+    <body>
+    	<div id="databacup_search">
+    		<!-- 有设置了浮动，  没清除 -->
+    		<span>搜索：</span>
+    		<div class="databacup_inp_btn">
+    			<!-- 使用class="search_input"  使得zc_manager.js 搜索清空提示生效 -->
+	    		<input type="text" class="search_input" name="search_input" value="输入关键字..." style="width: 660px" />
+	    		<!-- glyphicon glyphicon-search -->
+	    		<button type="button" id="databacup_search_btn" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-search"></span>搜索 </button>
+    		</div>
+    	</div>
+    	<div id="databacup_detail">
+    		<table class="table table-bordered table-hover table-striped table-condensed">
+    		 	<caption id="databacup_cap"><strong>----选择备份项----</strong></caption>
+				<thead>
+					<tr>
+						
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+						<th>6</th>
+						<th>7</th>		
+						<th>8</th>
+						<th>9</th>
+						<th>10</th>
+						<th>11</th>
+						<th>12</th>
+						<th>13</th>
+						<th>14</th>
+						<th>15</th>	
+						<th>16</th>
+						<th>17</th>
+						<th>18</th>
+						<th>19</th>															
+					</tr>					
+					<tr>
+						
+						<th>领用单为号</th>
+						<th>仪器编号</th>
+						<th>仪器名称</th>
+						<th>型号</th>
+						<th>规格</th>
+						<th>单价</th>
+						<th>分类号</th>		
+						<th>厂家</th>
+						<th>出厂号</th>
+						<th>出厂日期</th>
+						<th>购置日期</th>
+						<th>存放地名称</th>
+						<th>现状</th>
+						<th>经费科目</th>
+						<th>使用方向</th>	
+						<th>设备来源</th>
+						<th>入库时间</th>
+						<th>经手人</th>
+						<th>使用单位号</th>															
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><button type="button">添加</button></td>
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>		
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" > 添加</button></td>
+						<td><button type="button" >添加</button></td>	
+						<td><button type="button"> 添加</button></td>
+						<td><button type="button"> 添加</button></td>
+						<td><button type="button" >添加</button></td>		
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>	
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>	
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>
+						<td><button type="button" >添加</button></td>	
+						<td><button type="button" >添加</button></td>							
+					</tr>
+					<tr>
+						<td>未选择</td>
+						<td>已选择</td>
+						<td>已选择</td>
+						<td>已选择</td>
+						<td>已选择</td>
+						<td>已选择</td>
+						<td>已选择</td>
+						<td>已选择</td>						
+						<td>已选择</td>
+						<td>未选择</td>
+						<td>未选择</td>						
+						<td>已选择</td>
+						<td>未选择</td>
+						<td>未选择</td>
+						<td>未选择</td>
+						<td>未选择</td>			
+						<td>已选择</td>			
+						<td>未选择</td>
+						<td>未选择</td>
+					</tr>																																																																																																																																			
+				</tbody>
+			</table>
+
+			<table class="table table-bordered table-hover table-striped table-condensed">
+    		 	<caption id="databacup_cap"><strong>----已选择备份项----</strong></caption>
+				<thead>
+					<tr>				
+					<tr>
+						
+						<th>领用单为号</th>
+						<th>仪器编号</th>
+						<th>仪器名称</th>
+						<th>型号</th>
+						<th>规格</th>
+						<th>单价</th>
+						<th>分类号</th>		
+						<th>厂家</th>
+						<th>出厂号</th>
+						<th>出厂日期</th>
+						<th>购置日期</th>
+						<th>存放地名称</th>
+						<th>现状</th>
+						<th>经费科目</th>
+						<th>使用方向</th>	
+						<th>设备来源</th>
+						<th>入库时间</th>
+						<th>经手人</th>
+						<th>使用单位号</th>															
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><button type="button">删除</button></td>
+						<td><button type="button">删除</button></td>
+						<td><button type="button">删除</button></td>		
+						<td><button type="button">删除</button></td>
+						<td><button type="button"> 删除</button></td>
+						<td><button type="button">删除</button></td>	
+						<td><button type="button"> 删除</button></td>
+						<td><button type="button"> 删除</button></td>
+						<td><button type="button" >删除</button></td>		
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>	
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>	
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>
+						<td><button type="button" >删除</button></td>	
+						<td><button type="button" >删除</button></td>							
+					</tr>																																																																																																																																		
+				</tbody>
+			</table>
+    	</div>
+		<div id="databacup_page">
+			<ul class="pagination pagination-sm " >
+			    <li><a href="#">首页</a></li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">6</a></li>
+			    <li><a href="#">转到第
+			    	<select>
+						 <option value="1">1</option>
+						 <option value="2">2</option>
+						 <option value="3">3</option>
+						 <option value="4">4</option>
+						 <option value="1">5</option>
+						 <option value="2">6</option>
+						 <option value="3">7</option>
+						 <option value="4">8</option>
+						 <option value="3">9</option>
+						 <option value="4">10</option>						 
+					</select>  页
+				</a></li>
+			    <li><a href="#">尾页</a></li>
+			</ul>
+		</div>
+    </body>
+</html>

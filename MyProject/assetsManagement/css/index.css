@@ -1,0 +1,113 @@
+.clr{
+	clear:both;
+	width:0px;
+	height:0px;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+}
+.header{
+	width: 1024px;
+	/*原来60*/
+	height: 65px;
+	/*border: 1px solid rgb(1,218,233);*/
+	/*原来它是相对于.css文件这个目录，而不是调用css文件所在文件的这个目录 （就是要以css为目标对象找图片）*/
+	/*background: url("../image/banner_putong.png");*/
+	border-bottom: 5px solid  rgb(1,218,233);
+	
+}
+.header_l{
+	float: left;
+	display: inline-block;
+	/*padding-top: 10px;*/
+	padding-left: 50px;
+    color: black;
+    font-size: 24px;
+    /*border: 1px solid gray;*/
+}
+#tittle{
+
+}
+
+.header_r{
+	padding-top: 20px;
+	float: right;
+	 /*border: 1px solid gray;*/
+}
+#loginNameMain{
+	margin-right: 50px;
+}
+#editPwd{
+	/*直接定义颜色（color）则a:hover无法生效*/
+	/*color: black;*/
+
+}
+
+#exit_text{   	
+	margin-left: 20px;
+	/*color: black;*/
+	margin-right: 10px;
+	/*border: 1px solid red;*/
+}
+.main{
+	width:1024px;
+	height:560px;
+}
+.left_side{
+	float: left;
+	width: 200px;
+	height: 590px;
+	margin-top: 0.5px;
+	/*border: 1px solid gray;*/
+	/*border-top: 1px solid gray;*/
+	/*border-left: 1px solid gray;*/
+	border-right: 5px solid rgb(226,226,226);
+	background-color: rgb(243,243,243);
+}
+.right_side{
+	float: right;
+	width: 820px;
+	margin-left: 4px;
+	/*560原先*/
+	height: 590px;
+	margin-top: 0.5px;
+	/*border: 1px solid gray;*/
+/*	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;*/
+}
+
+/*a：hover事件*/
+.header_r a{
+	color: black;
+}
+.header_r a:hover{
+	color:  rgb(86,202,249);
+	/* #205AA7深蓝色*/
+	/*background-color:gray;*/
+	/*background: url("image/nav_on.png");*/
+}
+
+.left_side_li_click{
+	background-color: rgb(255,255,255);
+	color: rgb(86,202,249);
+}
+
+.left_side > ul >li a{
+	/*color: rgb(161,161,161);*/
+	color: black;
+} 
+
+.left_side > ul >li a:hover{
+	color: rgb(86,202,249);
+	background-color: white;
+} 
+.left_side > ul >li a:visited{
+	background-color: white;
+
+} 
+
+
+
+

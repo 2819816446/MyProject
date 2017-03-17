@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>资产管理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/foreign/jquery-1.12.0.min.js"></script> 
+<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css" />
+<style type="text/css">
+/*	.zc_container{
+		height: 560px;
+		width: 790px;
+		border: 1px solid gray;
+	}*/
+	#zc_search{
+		height: 30px;
+		width: 790px;
+		margin-left: 20px;
+		margin-top: 20px;
+		border: 1px solid gray;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	#zc_search span{
+		font-size: 15px;
+		float: left;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	.zc_inp_btn{
+		float: right;
+		margin-right: 25px;
+	}
+
+
+	#zc_detail{
+		/*padding: 5px;*/
+		margin-left: 20px;
+		margin-top: 1px;
+	}
+		/*增加每页显示*/
+	.per_pageshow{
+		width: 770px;
+		height: 25px;
+		border: 1px solid red;
+		margin-top: 5px;
+		/*margin-left: 10px;*/
+	}	
+	#zc_detail table{
+		width: 770px;
+	}
+	#zc_detail table tr{
+		/*height: 40px;*/
+	}
+	#zc_cap{
+		height: 28px;
+		color: black;
+		margin-bottom: 2px;
+		background: url("../image/movebox_title.gif");
+	}
+	#zc_page{
+		/*margin-top: -30px;*/
+		border: 1px solid red;
+	}
+	#zc_page ul{
+		margin-left: 200px;
+		/*使分页相对表格紧靠点*/
+		margin-top: -10px;
+	}
+</style>
+
+<script type="text/javascript" src="../js/myself/zc_manager.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		// $(".search_input").focus(function(){
+		//   $(".search_input").val("");
+		// });
+
+		// $(".search_input").blur(function(){
+		// 	// 如果输入框有内容显示输入框内容，没有显示提示文字
+		// 	if($(".search_input").val() !== ""){
+		// 		$(".search_input").val()=$(".search_input").val();
+		// 	}
+		// 	else
+		// 	{
+		// 	  $(".search_input").val("输入关键字...");
+		// 	}
+		// });
+
+	});
+</script>
+</head>
+    <body>
+    	<!--如果设置class="container"会居中   <div class="zc_container"> </div>-->   	
+    	<div id="zc_search">
+    		<!-- 有设置了浮动，  没清除 -->
+    		<span>输入仪器名称：</span>
+    		<div class="zc_inp_btn">
+	    		<input type="text" class="search_input" name="search_input" value="输入关键字..." style="width: 600px" />
+	    		<!-- glyphicon glyphicon-search -->
+	    		<button type="button" id="search_btn" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-search"></span>搜索 </button>
+    		</div>
+    	</div>
+
+ 
+		  	
+    	<div id="zc_detail">
+	    	<div class="per_pageshow"> 
+	    		每页显示
+	    		<select>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>					 
+				</select> 
+				条
+			</div> 
+    		<table class="table table-bordered table-hover table-striped">
+    		 	<caption id="zc_cap"><strong>----资产列表----</strong></caption>
+				<thead>
+					<tr>
+						<th>领用单位号</th>
+						<th>仪器编号</th>
+						<th>仪器名称</th>
+						<th>型号</th>
+						<th>规格</th>
+						<th>单价</th>
+						<th>分类号</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301554</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs edit"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>	
+					<tr>
+						<td>1001</td>
+						<td>505050</td>
+						<td>电脑</td>
+						<td>st_3301</td>
+						<td>xx-s30</td>
+						<td>5000元</td>
+						<td>1</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>	
+						</td>
+					</tr>				
+				</tbody>
+			</table>
+    	</div>
+		<div id="zc_page">
+			<ul class="pagination pagination-sm " >
+			    <li><a href="#">首页</a></li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">6</a></li>
+			    <li><a href="#">转到第
+			    	<select>
+						 <option value="1">1</option>
+						 <option value="2">2</option>
+						 <option value="3">3</option>
+						 <option value="4">4</option>
+						 <option value="1">5</option>
+						 <option value="2">6</option>
+						 <option value="3">7</option>
+						 <option value="4">8</option>
+						 <option value="3">9</option>
+						 <option value="4">10</option>						 
+					</select>  页
+				</a></li>
+			    <li><a href="#">尾页</a></li>
+			</ul>
+		</div>
+		
+    </body>
+</html>

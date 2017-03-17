@@ -1,0 +1,51 @@
+	#notice_search{
+		height: 30px;
+		width: 790px;
+		margin-left: 20px;
+		margin-top: 20px;
+		/*border: 1px solid gray;*/
+	}
+	/*设置浮动使span和input/button在同一行*/
+	#notice_search span{
+		font-size: 15px;
+		float: left;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	.notice_inp_btn{
+		float: right;
+		margin-right: 25px;
+	}
+	#notice_detail{
+		/*padding: 5px;*/
+		margin-left: 20px;
+		margin-top: 1px;
+	}
+	/*增加每页显示*/
+	.per_pageshow{
+		width: 770px;
+		height: 25px;
+		/*border: 1px solid red;*/
+		margin-top: 5px;
+		/*margin-left: 10px;*/
+	}
+	#notice_detail table{
+		width: 770px;
+	}
+	#notice_detail table tr{
+		/*height: 40px;*/
+	}
+	#notice_cap{
+		height: 28px;
+		color: black;
+		margin-bottom: 2px;
+		background: url("../image/movebox_title.gif");
+	}
+	#notice_page{
+		/*margin-top: -30px;*/
+		border: 1px solid red;
+	}
+	#notice_page ul{
+		margin-left: 200px;
+		/*使分页相对表格紧靠点*/
+		margin-top: -10px;
+	}

@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>用户管理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/foreign/jquery-1.12.0.min.js"></script> 
+<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css" />
+<style type="text/css">
+/*	.zc_container{
+		height: 560px;
+		width: 790px;
+		border: 1px solid gray;
+	}*/
+	#user_search{
+		height: 30px;
+		width: 790px;
+		margin-left: 20px;
+		margin-top: 20px;
+		border: 1px solid gray;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	#user_search span{
+		font-size: 15px;
+		float: left;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	.user_inp_btn{
+		float: right;
+		margin-right: 25px;
+	}
+	#user_detail{
+		/*padding: 5px;*/
+		margin-left: 20px;
+		margin-top: 1px;
+	}
+	/*增加每页显示*/
+	.per_pageshow{
+		width: 770px;
+		height: 25px;
+		border: 1px solid red;
+		margin-top: 5px;
+		/*margin-left: 10px;*/
+	}
+	#user_detail table{
+		width: 770px;
+	}
+	#user_detail table tr{
+		/*height: 40px;*/
+	}
+	#user_cap{
+		height: 28px;
+		color: black;
+		margin-bottom: 2px;
+		background: url("../image/movebox_title.gif");
+	}
+	#user_page{
+		/*margin-top: -30px;*/
+		border: 1px solid red;
+	}
+	#user_page ul{
+		margin-left: 200px;
+		/*使分页相对表格紧靠点*/
+		margin-top: -10px;
+	}
+</style>
+
+<script type="text/javascript" src="../js/myself/zc_manager.js"></script>
+<script type="text/javascript">
+	// $(document).ready(function(){
+
+	// 	$("#user_search_input").focus(function(){
+	// 	  $("#user_search_input").val("");
+	// 	});
+
+	// 	$("#user_search_input").blur(function(){
+	// 		// 如果输入框有内容显示输入框内容，没有显示提示文字
+	// 		if($("#user_search_input").val() !== ""){
+	// 			$("#user_search_input").val()=$("#user_search_input").val();
+	// 		}
+	// 		else
+	// 		{
+	// 		  $("#user_search_input").val("输入关键字...");
+	// 		}
+	// 	});
+
+	// });
+</script>
+</head>
+    <body>
+    	<!--如果设置class="container"会居中   <div class="zc_container"> </div>-->   	
+    	<div id="user_search">
+    		<!-- 有设置了浮动，  没清除 -->
+    		<span>输入用户名：</span>
+    		<div class="user_inp_btn">
+    			<!-- 使用class="search_input"  使得zc_manager.js 搜索清空提示生效 -->
+	    		<input type="text" class="search_input" name="search_input" value="输入关键字..." style="width: 600px" />
+	    		<!-- glyphicon glyphicon-search -->
+	    		<button type="button" id="user_search_btn" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-search"></span>搜索 </button>
+    		</div>
+    	</div>
+    	<div id="user_detail">
+	    	<div class="per_pageshow"> 
+	    		每页显示
+	    		<select>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>					 
+				</select> 
+				条
+			</div>     		
+    		<table class="table table-bordered table-hover table-striped">
+    		 	<caption id="user_cap"><strong>----用户列表----</strong></caption>
+				<thead>
+					<tr>
+						<th>用户名</th>
+						<th>性别</th>
+						<th>年龄</th>
+						<th>身份</th>
+						<th>工龄</th>
+						<th>入职时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>																											
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>	
+					<tr>
+						<td>张三</td>
+						<td>男</td>
+						<td>30</td>
+						<td>系统管理员</td>
+						<td>15年</td>
+						<td>2008-5-5</td>
+						<td>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil"></span>编辑</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button>
+							<button type="button" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-align-justify"></span> 详情</button>							
+						</td>
+					</tr>																						
+				</tbody>
+			</table>
+    	</div>
+		<div id="user_page">
+			<ul class="pagination pagination-sm " >
+			    <li><a href="#">首页</a></li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">6</a></li>
+			    <li><a href="#">转到第
+			    	<select>
+						 <option value="1">1</option>
+						 <option value="2">2</option>
+						 <option value="3">3</option>
+						 <option value="4">4</option>
+						 <option value="1">5</option>
+						 <option value="2">6</option>
+						 <option value="3">7</option>
+						 <option value="4">8</option>
+						 <option value="3">9</option>
+						 <option value="4">10</option>						 
+					</select>  页
+				</a></li>
+			    <li><a href="#">尾页</a></li>
+			</ul>
+		</div>
+		
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+
+<head>
+<title>资产管理系统登入</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../js/foreign/jquery-1.12.0.min.js"></script> 
+<link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<script src="../js/myself/login.js" ></script>
+</head>
+    <body>
+        <div class="contain">
+        	<div>
+        		<h1 class="logintitle"><strong>福建师范大学资产管理系统</strong></h1>
+        	</div>
+        	<div class="logindiv">
+                <form id="loginform"  method="post">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="35" class="login-text" align="right">用户名<br/></td>
+                            <td><input id="username" name="username" type="text" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td height="35" class="login-text" align="right">密　码<br/></td>
+                            <td><input id="password" name="password" type="password" size="30"/></td>
+                        </tr>
+                        <tr>
+                            <td height="35" class="login-text" align="right">验证码</td>
+                            <td height="35">
+                                <input id="yanzhengma" name="yanzhengma" type="text" size="10"/>
+                                <div id="img_yanzhengma"><a href="#"><img src="../image/yanzhengma.png"/> </a></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <!--  align="center"删除了 -->
+                            <td height="3" class="login_text" colspan="2" align="center">
+                                <input id="RadioButtonList1_0" type="radio" name="RadioButtonList1" value="系统管理员" height="35" class="login-text02">系统管理员
+                                <input id="RadioButtonList1_1" type="radio" name="RadioButtonList1" value="设备管理员" height="35" class="login-text02">设备管理员
+                            </td>
+                        <tr>
+                            <td height="50">&nbsp;</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" id="loginbtn" style="margin-left: 10px" onclick="return checkuser()"/>登陆</button>
+                                <button type="submit" class="btn btn-primary" id="login_reset" style="margin-left: 20px">重置</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+        	</div>
+            <div id="forget_pwd"><a href=""> 忘记密码？ </a></div>
+        </div>
+    </body>
+</html>

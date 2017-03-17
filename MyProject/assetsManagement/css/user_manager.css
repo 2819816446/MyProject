@@ -1,0 +1,48 @@
+/*	.zc_container{
+	height: 560px;
+	width: 790px;
+	border: 1px solid gray;
+}*/
+#user_search{
+	height: 30px;
+	width: 790px;
+	margin-left: 20px;
+	margin-top: 20px;
+	/*border: 1px solid gray;*/
+}
+/*设置浮动使span和input/button在同一行*/
+#user_search span{
+	font-size: 15px;
+	float: left;
+}
+/*设置浮动使span和input/button在同一行*/
+.user_inp_btn{
+	float: right;
+	margin-right: 25px;
+}
+#user_detail{
+	/*padding: 5px;*/
+	margin-left: 20px;
+	margin-top: 1px;
+}
+#user_detail table{
+	width: 770px;
+}
+#user_detail table tr{
+	/*height: 40px;*/
+}
+#user_cap{
+	height: 28px;
+	color: black;
+	margin-bottom: 2px;
+	background: url("../image/movebox_title.gif");
+}
+#user_page{
+	/*margin-top: -30px;*/
+	/*border: 1px solid red;*/
+}
+#user_page ul{
+	margin-left: 200px;
+	/*使分页相对表格紧靠点*/
+	margin-top: -12px;
+}

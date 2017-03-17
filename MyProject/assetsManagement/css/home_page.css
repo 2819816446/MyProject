@@ -1,0 +1,27 @@
+
+#navbar{
+	margin-top: 20px;
+	height: 30px;
+	/*background: gray;*/
+}
+#navbar span{
+	margin-left: 20px;
+}
+
+#cap{
+	height: 28px;
+	color: black;
+	margin-bottom: 2px;
+	background: url("../image/movebox_title.gif");
+}
+
+#newlist table{
+	width: 790px;
+	padding: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+/*		border-top: 5px solid #aaaaff;
+	border-left: 5px solid #aaaaff;
+	border-right: 5px solid #aaaaff;*/
+}
+

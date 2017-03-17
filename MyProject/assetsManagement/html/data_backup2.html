@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>data_backup2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/foreign/jquery-1.12.0.min.js"></script> 
+<script type="text/javascript" src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css" />
+<style type="text/css">
+	.clr{
+		clear:both;
+		width:0px;
+		height:0px;
+	}
+	#databacup_search{
+		height: 30px;
+		width: 790px;
+		margin-left: 20px;
+		margin-top: 20px;
+		/*border: 1px solid gray;*/
+	}
+	/*设置浮动使span和input/button在同一行*/
+	#databacup_search span{
+		font-size: 15px;
+		float: left;
+	}
+	/*设置浮动使span和input/button在同一行*/
+	.databacup_inp_btn{
+		float: right;
+		margin-right: 25px;
+	}
+	#databacup_detail{
+		/*padding: 5px;*/
+		margin-left: 20px;
+		margin-top: 1px;
+		/*height: 560px;*/
+		height: 850px;
+		width: 760px;
+		border: 1px solid red;
+	}
+
+
+	#databacup_detail table{
+
+		/*float: left;*/
+		/*width: 770px;*/
+		width: 350px;
+	}
+	#table1{
+		float: left;
+	}
+	#table2{
+		float: right;
+	}
+	#databacup_detail table tr{
+		height: 40px;
+		/*height: 80px;*/
+	}
+	/*两个备份按钮*/
+	.btn_backubtable{
+		margin-left: 20px;
+		/*使按钮相对表格紧靠点*/
+		margin-top: -62px;
+	}
+
+	.btn_backubdata{
+		margin-left: 20px;
+		/*使按钮相对表格紧靠点*/
+		margin-top: -62px;
+	}
+
+
+	#databacup_cap{
+		height: 28px;
+		color: black;
+		margin-bottom: 2px;
+		background: url("../image/movebox_title.gif");
+	}
+	#databacup_page{
+		/*margin-top: -30px;*/
+		/*border: 1px solid red;*/
+	}
+	#databacup_page ul{
+		margin-left: 20px;
+		/*使分页相对表格紧靠点*/
+		margin-top: -12px;
+	}
+
+</style>
+</head>
+    <body>
+    	<div id="databacup_search">
+    		<!-- 有设置了浮动，  没清除 -->
+    		<span>搜索：</span>
+    		<div class="databacup_inp_btn">
+    			<!-- 使用class="search_input"  使得zc_manager.js 搜索清空提示生效 -->
+	    		<input type="text" class="search_input" name="search_input" value="输入关键字..." style="width: 660px" />
+	    		<!-- glyphicon glyphicon-search -->
+	    		<button type="button" id="databacup_search_btn" class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-search"></span>搜索 </button>
+    		</div>
+    	</div>
+    	<div id="databacup_detail">
+    		<!-- 每页显示提示 -->
+<!--     		<div class="per_pageshow"> 
+	    		
+	    		每页显示
+	    		<select>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>					 
+				</select> 
+				条
+			</div> -->
+    		<table id="table1" class="table table-bordered table-hover table-striped table-condensed">
+    		 	<caption id="databackup_cap"><strong>----选择备份项----</strong></caption>
+				<thead>
+					<tr>
+						<th> </th>
+						<th>选择</th>
+						<th>状态</th>
+						<th>序号</th>													
+					</tr>					
+				</thead>
+				<tbody>
+					<tr>
+						<td>领用单为号</td>
+						<td><button type="button" class="btn btn-primary btn-xs "> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>1</td>						
+					</tr>
+					<tr>
+						<td>仪器编号</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>2</td>						
+					</tr>		
+					<tr>
+						<td>仪器名称</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>3</td>						
+					</tr>
+					<tr>
+						<td>型号</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>4</td>						
+					</tr>		
+					<tr>
+						<td>规格</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>5</td>						
+					</tr>
+					<tr>
+						<td>单价</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>6</td>						
+					</tr>		
+					<tr>
+						<td>分类号</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>7</td>						
+					</tr>
+					<tr>
+						<td>厂家</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>8</td>						
+					</tr>
+
+
+					<tr>
+						<td>出厂号</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>9</td>						
+					</tr>
+					<tr>
+						<td>出厂日期</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>10</td>						
+					</tr>		
+					<tr>
+						<td>购置日期</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>11</td>						
+					</tr>
+					<tr>
+						<td>存放地名称</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>12</td>						
+					</tr>		
+					<tr>
+						<td>现状</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>13</td>						
+					</tr>
+					<tr>
+						<td>经费科目</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>14</td>						
+					</tr>		
+					<tr>
+						<td>使用方向</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>15</td>						
+					</tr>
+					<tr>
+						<td>设备来源</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>16</td>						
+					</tr>
+					<tr>
+						<td>入库时间</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>17</td>						
+					</tr>		
+					<tr>
+						<td>经手人</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>18</td>						
+					</tr>
+					<tr>
+						<td>使用单位号</td>
+						<td><button type="button" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span>添加</button></td>
+						<td>已添加</td>		
+						<td>19</td>						
+					</tr>																								
+				</tbody>
+			</table>
+
+    		<table id="table2" class="table table-bordered table-hover table-striped table-condensed">
+    		 	<caption id="databacup_cap"><strong>----已选择备份项----</strong></caption>
+				<thead>
+					<tr>
+						<th>已添加项目</th>
+						<th>选择</th>												
+					</tr>					
+				</thead>
+				<tbody>
+					<tr>
+						<td>领用单为号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>				
+					</tr>
+					<tr>
+						<td>仪器编号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>		
+					<tr>
+						<td>仪器名称</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>
+					<tr>
+						<td>型号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>		
+					<tr>
+						<td>规格</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>
+					<tr>
+						<td>单价</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>
+						
+					</tr>		
+					<tr>
+						<td>分类号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>
+						
+					</tr>
+					<tr>
+						<td>厂家</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></tddanger						
+					</tr>
+
+
+					<tr>
+						<td>出厂号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>
+					</tr>
+					<tr>
+						<td>出厂日期</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>			
+					</tr>		
+					<tr>
+						<td>购置日期</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>			
+					</tr>
+					<tr>
+						<td>存放地名称</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>		
+					<tr>
+						<td>现状</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>
+					<tr>
+						<td>经费科目</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>		
+					<tr>
+						<td>使用方向</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>
+					<tr>
+						<td>设备来源</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>					
+					</tr>
+					<tr>
+						<td>入库时间</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>				
+					</tr>		
+					<tr>
+						<td>经手人</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>				
+					</tr>
+					<tr>
+						<td>使用单位号</td>
+						<td><button type="button" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> 删除</button></td>		
+					</tr>																								
+				</tbody>
+			</table>
+    	</div>
+		<div class="clr"></div>			
+
+
+		<div id="databacup_page">
+			<button type="button" class=" btn btn-default btn-xm btn_backubtable"> <span class="glyphicon glyphicon-book"></span>备份报表</button>
+			<button type="button" class=" btn btn-default btn-xm btn_backubdata"> <span class="glyphicon glyphicon-book"></span> 备份已选数据项</button>    	
+			<ul class="pagination pagination-sm " >
+			    <li><a href="#">首页</a></li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li><a href="#">6</a></li>
+			    <li><a>转到第
+			    	<select>
+						 <option value="1">1</option>
+						 <option value="2">2</option>
+						 <option value="3">3</option>
+						 <option value="4">4</option>
+						 <option value="1">5</option>
+						 <option value="2">6</option>
+						 <option value="3">7</option>
+						 <option value="4">8</option>
+						 <option value="3">9</option>
+						 <option value="4">10</option>						 
+					</select>  页
+				</a></li>
+			    <li><a href="#">尾页</a></li>
+			</ul>
+		</div>
+    </body>
+</html>

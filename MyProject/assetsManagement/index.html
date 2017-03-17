@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>assets management</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/foreign/jquery-1.12.0.min.js"></script>	
+<script type="text/javascript" src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/home_page.css">
+<link rel="stylesheet" type="text/css" href="css/zc_manager.css">
+<link rel="stylesheet" type="text/css" href="css/user_manager.css">
+<link rel="stylesheet" type="text/css" href="css/edit_password.css">
+<link rel="stylesheet" type="text/css" href="css/data_backup.css">
+<link rel="stylesheet" type="text/css" href="css/notice_manager.css">
+</head>
+    <body>
+		<div class="container">
+    		<div class="header">
+    			<div class="header_l">
+    				<img src="image/logo.png">
+    				<span id="tittle"><strong>资产管理系统</strong></span>
+    			</div>
+	            <div class="header_r">
+	            	<span style="font-size: 16px">欢迎管理员：<span id="loginNameMain">张三</span>
+	            	<a href="#" id="editPwd"><i class="glyphicon glyphicon-edit"> </i>修改密码</a>
+	            	<a href=""><span id ="exit_text" class="glyphicon glyphicon-off">退出</span> </a>
+	            </div>   
+    		</div>
+
+    		<!-- 清除浮动 -->
+    		<div class="clr"></div>
+	    	<div class="main">
+	    		<div class="left_side">
+	    			<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" >
+	                    <li id="shouye"><a href="#"> <i class="glyphicon glyphicon-th-large"> </i>&nbsp;首页</a></li>
+	                    <li id="zc_manage"><a href="#"> <i class="glyphicon glyphicon-book"> </i> 资产管理</a></li>
+                        <li id="user_manager"><a href="#"><i class="glyphicon glyphicon-user"> </i>&nbsp;用户管理</a></li>
+                        <!-- <li><a href="#"><i class="glyphicon glyphicon-edit"></i>&nbsp;修改密码</a></li> -->
+                        <li id="data_backup"><a href="#"> <i class="glyphicon glyphicon-folder-open"> </i>&nbsp;数据备份</a></li>
+                        <li id="notice_manager"><a href="#" ><i class="glyphicon glyphicon-volume-up"></i>&nbsp;公告管理</a></li>
+                        <!-- <li><a href="#"> <i class="glyphicon glyphicon-eye-open"> </i>&nbsp;我的位置</a></li> -->
+	                </ul>
+				<!-- 修改密码的div -->
+					<div id="fade" class="black_overlay">
+					</div>
+					<div id="MyDiv" class="white_content">
+						<div style="text-align: right; cursor: default; height: 40px;">
+							<span style="font-size: 16px; " class="close_pwddiv glyphicon glyphicon-remove" >关闭</span>
+						</div>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="BD_tab">
+								<tr>
+									<td style="width: 110px;" align="right">用户名：</td>
+									<td>
+										<input name="" id="username" type="text" class="input220" >
+										 <font color="red">*</font>
+									</td>
+								</tr>
+								<tr>
+									<td align="right">旧密码：</td>
+									<td><input name="" id="oldpwd" type="password" class="input220">
+									<font color="red">*</font></td>
+								</tr>
+								<tr>
+									<td style="width: 110px;" align="right">新密码：</td>
+									<td><input name="" id="newpwd" type="password" class="input220"> 
+									<font color="red">*</font></td>
+								</tr>
+							</table>
+							<button name="确认" id="ok" class="pwd_okcancle btn btn-primary">确认</button>
+							<button name="取消" id="cancle" class="pwd_okcancle close_pwddiv btn btn-danger">取消</button>
+					</div>
+					<!-- 修改密码的div -->	                
+	    		</div>
+	    		<div class="right_side">
+	    			<!-- 公告新闻开始 -->
+	    			<div id="navbar">
+			    		<span class="glyphicon glyphicon-home"> 当前位置-----通知公告</span>
+			    	</div>
+			    	<div id="newlist">
+			    		<table class="table table-bordered table-hover">
+							<caption id="cap"><strong>相关公告新闻</strong></caption>
+							<thead>
+								<tr>
+									<th>公告标题</th>
+									<th>发布单位</th>
+									<th>发布时间</th>
+									<th>有效日期</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2016年图书馆电脑借出公告</td>
+									<td>系统管理员</td>
+									<td>2016-6-6</td>
+									<td>2016-6-6</td>
+								</tr>
+								<tr>
+									<td>2016年图书馆电脑借出公告</td>
+									<td>系统管理员</td>
+									<td>2016-6-6</td>
+									<td>2016-6-6</td>
+								</tr>
+								<tr>
+									<td>2016年图书馆电脑借出公告</td>
+									<td>系统管理员</td>
+									<td>2016-6-6</td>
+									<td>2016-6-6</td>
+								</tr>
+								<tr>
+									<td>2016年图书馆电脑借出公告</td>
+									<td>系统管理员</td>
+									<td>2016-6-6</td>
+									<td>2016-6-6</td>
+								</tr>
+							</tbody>
+						</table>
+			    	</div>
+				<!-- 公告新闻结束 -->
+
+	    		</div>
+	    	</div>
+    	</div>
+     <script src="js/myself/index.js"></script>	
+      <script src="js/myself/zc_manager.js"></script>
+      <script src="js/myself/data_backcup.js"></script>
+    </body>
+</html>

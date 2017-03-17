@@ -1,0 +1,41 @@
+    body {
+        background: url("../image/login_bg.jpg");
+        /*background-color: gray;*/
+    }
+    .contain{
+        /*background-color:#3FF;*/
+    }
+
+    /*表单部分的div*/
+    .logindiv{
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        /*background-color: gray;*/
+    }
+
+
+
+    /*验证码图片*/
+    #img_yanzhengma{
+        display: inline;
+    }
+    .logintitle{
+        text-align: center;
+        margin-top: 100px;
+        /*蓝色#69F*/
+        color:#396;
+    }
+
+    /*输入框前面的提示文字*/
+    .login-text{
+        font-size: 16px;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		
+    }
+    /*忘记密码*/
+    #forget_pwd a{
+       margin-left: 725px;
+	   
+    }

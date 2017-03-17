@@ -1,0 +1,59 @@
+/*.zc_container{
+	height: 560px;
+	width: 790px;
+	border: 1px solid gray;
+}*/
+#zc_search{
+	height: 30px;
+	width: 790px;
+	margin-left: 20px;
+	margin-top: 20px;
+	/*border: 1px solid gray;*/
+}
+/*设置浮动使span和input/button在同一行*/
+#zc_search span{
+	font-size: 15px;
+	float: left;
+}
+/*设置浮动使span和input/button在同一行*/
+.zc_inp_btn{
+	float: right;
+	margin-right: 25px;
+}
+/*选择每页显示多少条信息*/
+.per_pageshow{
+	/*border: 2px solid red;*/
+	width: 760px;
+	height: 25px;
+	margin-top: 2px;
+	margin-left: 10px;
+}	
+#zc_detail{
+	/*padding: 5px;*/
+	margin-left: 20px;
+	margin-top: 1px;
+}
+#zc_detail table{
+	width: 770px;
+}
+#zc_detail table tr{
+	/*height: 40px;*/
+}
+#zc_cap{
+	height: 28px;
+	color: black;
+	margin-bottom: 2px;
+	background: url("../image/movebox_title.gif");
+}
+
+#zc_page{
+	/*使分页相对表格紧靠点*/
+	/*margin-top: -30px	*/
+/*	border: 1px solid blue;
+	height: 50px;*/
+}
+#zc_page ul{
+	margin-left: 200px;
+	/*使分页相对表格紧靠点*/
+	margin-top: -12px;
+}
